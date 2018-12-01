@@ -1,0 +1,17 @@
+k_fold = 5
+generate_data = 100
+max_range = 7
+
+picked k from validation	9	that accuracy 83.4375
+picked k from validation	13	that accuracy 83.425
+picked k from validation	9	that accuracy 83.2625
+picked k from validation	9	that accuracy 83.31875
+picked k from validation	9	that accuracy 83.5
+
+Program completed in 2730.26 seconds
+45m20d
+-------
+
+k_fold = 8
+generate_data = 1000
+max_range = 7
