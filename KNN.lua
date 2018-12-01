@@ -210,8 +210,8 @@ end
 -- MAIN PROGRAM
 math.randomseed(os.time())
 
-local k_fold = 8
-local generate_data = 1000 -- testing x data
+local k_fold = 10
+local generate_data = 100 -- testing x data
 local max_range = 7 -- try k-nearest = {5, 9, 13, 17, 21, 25, 29}
 
 local k_select = {}
@@ -226,7 +226,7 @@ local average = 0
 
 print("knn is on running...\ngenerate " ..
     generate_data.." new random data train base index position..." ..
-    "\nrange of iterate " .. max_range
+    "\nrange of iterate " .. max_range .. "..\nwith kfold: " .. k_fold
 )
 
 for i=1,generate_data do -- do generate x sample data

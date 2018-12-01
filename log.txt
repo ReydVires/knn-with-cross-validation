@@ -1,3 +1,8 @@
+-----
+# Analisis
+-----
+K = (i*4 + 1)
+
 k_fold = 5
 generate_data = 100
 max_range = 7
@@ -10,8 +15,71 @@ picked k from validation	9	that accuracy 83.5
 
 Program completed in 2730.26 seconds
 45m20d
--------
+----
 
 k_fold = 8
 generate_data = 1000
 max_range = 7
+
+picked k from validation	13	that accuracy 81.809
+
+Program completed in 48948.82 seconds
+13j30m
+----
+
+k_fold = 5
+generate_data = 100
+max_range = 7
+
+picked k from validation	13	that accuracy 81.54
+
+Program completed in 3454.97 seconds
+58m
+----
+
+k_fold = 10
+generate_data = 100
+max_range = 7 
+
+picked k from validation	13	that accuracy 80.85
+
+Program completed in 3584.94 seconds
+1j
+----
+
+k_fold = 5
+generate_data = 1000
+max_range = 7 
+
+picked k from validation	9	that accuracy 83.410625
+----
+
+k_fold = 10
+generate_data = 1000
+max_range = 7
+
+picked k from validation	9	that accuracy 80.69875
+----
+
+k_fold = 8
+generate_data = 1000
+max_range = 7
+
+picked k from validation	13	that accuracy 81.817
+----
+
+k_fold = 10
+generate_data = 1000
+max_range = 7
+
+picked k from validation	13	that accuracy 80.76875
+----
+
+k_fold = 10
+generate_data = 100
+max_range = 7
+
+picked k from validation	13	that accuracy 80.9375
+
+Program completed in 3523.55 seconds
+1j
