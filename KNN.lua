@@ -2,9 +2,9 @@
 --- Prepare data
 local TRAIN_PATH = "DataTrain_Tugas3_AI.csv"
 local TEST_PATH = "DataTest_Tugas3_AI.csv"
-local ANSWER_PATH = "D:/TelkomUniversity/AI/Tugas_KNN/TebakanTugas3.csv"
---local ANSWER_PATH = "/media/reydvires/0AE8CA9CE8CA8603/TelkomUniversity/AI/" ..
-  --  "Tugas_KNN/Alternative/TebakanTugas3.csv"
+--local ANSWER_PATH = "D:/TelkomUniversity/AI/Tugas_KNN/TebakanTugas3.csv"
+local ANSWER_PATH = "/media/reydvires/0AE8CA9CE8CA8603/TelkomUniversity/AI/" ..
+    "Tugas_KNN/Alternative/TebakanTugas3.csv"
 
 -- @param table Print traverse of table
 local function print_table(table)
@@ -235,7 +235,7 @@ end
 
 -- do validation
 while (range <= max_range) do
-  knn = range * 4 + 1
+  knn = range * 4 + 1 -- analisis
   for j=1,#validation_list do
     local result_tab = {}
     local new_label = {}
@@ -254,7 +254,7 @@ while (range <= max_range) do
           result_tab[count_fold][i][j] = {
             index = tab.validation[i].index,
             from = tab.test[j].index,
-            range = euclidean(tab.validation[i], tab.test[j]), -- try another range
+            range = euclidean(tab.validation[i], tab.test[j]),
             label = tab.test[j].y,
             true_label = tab.validation[i].y
           }
@@ -294,10 +294,10 @@ while (range <= max_range) do
     end
     --print("random data: " .. j, "k-fold: " .. k_fold, "\nknn: " .. knn)
     --print("fold: " .. error_label,"high error: " .. most_error)
-    accuracy = 100 - most_error/#result_tab[#result_tab]*100
+    accuracy = 100 - most_error/#result_tab[#result_tab]*100 -- rata-rata akurasi data untuk kfold
     average = average + accuracy
     --print("accuracy: " .. accuracy .. " %\n")
-    -- do save average or not avg but the less accuracy that will be choosen
+    -- do save average
     less_accuracy[j] = {
       fold = error_label,
       accuracy = accuracy,
@@ -313,7 +313,7 @@ while (range <= max_range) do
   }
 
   print("iterate: " .. count_k, "in random data: "..k_select[count_k].info.irdata,
-      "k: "..k_select[count_k].k, k_select[count_k].info.accuracy, "Final avg:" .. 
+      "k: "..k_select[count_k].k, k_select[count_k].info.accuracy, "Final avg:" ..
       k_select[count_k].average,"\n")
 
   average = 0
